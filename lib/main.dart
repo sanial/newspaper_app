@@ -9,7 +9,6 @@ import 'models/news_response/news_response.dart';
 import 'models/news_response/article.dart';
 import 'models/news_response/source.dart';
 
-
 void main() {
   runApp(const MyApp());
 }
@@ -64,7 +63,7 @@ class _HomePageState extends State<HomePage> {
               height: 20,
             ),
             Expanded(
-                child: FutureBuilder<List<Article>?>(
+                child: FutureBuilder<List<Article>>(
               future: NewsApiServices().fetchNewsArticle(),
               builder: (context, snapshot) {
                 if (snapshot.hasData &&
